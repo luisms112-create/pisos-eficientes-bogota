@@ -3,48 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisos Eficientes Bogotá</title>
+    <title>Pisos Eficientes Bogotá | Expertos en Instalación</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
-        header { background-color: #2c3e50; color: white; padding: 30px; }
-        h1 { margin: 15px 0 0 0; }
+        /* Variables de color */
+        :root {
+            --azul-oscuro: #2c3e50;
+            --verde-whatsapp: #25d366;
+            --gris-fondo: #f8f9fa;
+            --dorado-detalle: #d4af37;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--gris-fondo);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--azul-oscuro);
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+            border-bottom: 5px solid var(--dorado-detalle);
+        }
+
+        .logo-img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin: 20px 0 5px 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: -30px auto 50px auto; /* Sube un poco para entrar en el header */
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .beto-img {
+            width: 280px;
+            height: auto;
+            margin: 20px 0;
+            transition: transform 0.3s ease;
+        }
         
-        /* Estilos para el Logo */
-        .logo-img { max-width: 150px; border-radius: 50%; border: 3px solid white; }
-        
-        .container { max-width: 800px; margin: 40px auto; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        
-        /* Estilos para Beto */
-        .beto-img { width: 250px; height: auto; margin: 20px 0; }
-        
-        p { font-size: 1.2em; line-height: 1.6; color: #555; }
-        .cta-button { display: inline-block; background-color: #27ae60; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
-        .cta-button:hover { background-color: #219150; }
+        .beto-img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: var(--azul-oscuro);
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--gris-fondo);
+            padding-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            margin: 25px 0;
+            text-align: justify;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            gap: 15px;
+        }
+
+        .feature-item {
+            background: var(--gris-fondo);
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 150px;
+            font-weight: bold;
+            color: var(--azul-oscuro);
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--verde-whatsapp);
+            color: white;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="LOGO_PISOS EFICIENTE BOGOTA_LE_upscale_ultra_x4_size_of_changes_100_intensity_100.jpg" alt="Logo Pisos Eficientes" class="logo-img">
+        <img src="LOGO_PISOS EFICIENTE BOGOTA_LE_upscale_ultra_x4_size_of_changes_100_intensity_100.jpg" alt="Logo" class="logo-img">
         <h1>Pisos Eficientes Bogotá</h1>
+        <div class="tagline">Calidad y precisión en cada paso</div>
     </header>
 
-    <div class="container">
-        <h2>Expertos en Instalación y Mano de Obra</h2>
+    <div class="main-container">
+        <img src="MUÑEQUITO CASTOR_CANAL WHATSAPP.jpg" alt="Beto" class="beto-img">
         
-        <img src="MUÑEQUITO CASTOR_CANAL WHATSAPP.jpg" alt="Mascota Beto" class="beto-img">
+        <h2>Transformamos sus espacios con excelencia</h2>
         
-        <p>
-            Especialistas en el servicio de instalación técnica y mano de obra calificada para 
-            pisos <strong>SPC y laminados HDF</strong>.
+        <p class="description">
+            Especialistas en el servicio de <strong>instalación técnica y mano de obra calificada</strong> para pisos SPC y laminados HDF en la ciudad de Bogotá. 
+            Transformamos ambientes mediante procesos ágiles y limpios, garantizando la excelencia en el montaje y acabados modernos para hogares y oficinas con la máxima eficiencia.
         </p>
-        <p>
-            Transformamos ambientes con renovaciones ágiles y limpias, garantizando excelencia en el 
-            montaje y acabados modernos para hogares y oficinas con máxima eficiencia.
-        </p>
+
+        <div class="features">
+            <div class="feature-item">✔ Pisos SPC</div>
+            <div class="feature-item">✔ Laminados HDF</div>
+            <div class="feature-item">✔ Instalación Técnica</div>
+        </div>
         
-        <a href="https://wa.me/573159157491" class="cta-button" target="_blank">Contactar por WhatsApp</a>
+        <a href="https://wa.me/573159157491?text=Hola,%20quisiera%20cotizar%20una%20instalación%20de%20pisos%20con%20Pisos%20Eficientes%20Bogotá" class="btn-whatsapp" target="_blank">
+            Solicitar Cotización por WhatsApp
+        </a>
     </div>
+
+    <footer>
+        &copy; 2025 Pisos Eficientes Bogotá - Todos los derechos reservados.
+    </footer>
 
 </body>
 </html>
