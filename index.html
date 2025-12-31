@@ -3,135 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pisos Eficientes Bogotá | Instalación Profesional en 1-2 Días</title>
-    <meta name="description" content="Especialistas en instalación de pisos SPC y laminados HDF en Bogotá. Sin escombros, garantía de 1 año y cotización inmediata.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="custom.css">
+    <title>Pisos Eficientes Bogotá | Instalación en 1-2 Días</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Poppins', sans-serif; }
-        .hero-bg {
-            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(30, 58, 138, 0.8)), url('https://images.unsplash.com/photo-1581850518616-bcb8188bd44c?q=80&w=2070&auto=format&fit=crop');
+        /* CONFIGURACIÓN BÁSICA */
+        :root {
+            --azul-oscuro: #1e3a8a;
+            --azul-claro: #3b82f6;
+            --dorado: #fbbf24;
+            --blanco: #ffffff;
+            --gris: #f3f4f6;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--gris);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVEGACIÓN */
+        nav {
+            background: white;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area { display: flex; align-items: center; gap: 10px; }
+        .logo-img { width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--azul-oscuro); }
+        .brand { font-size: 1.2rem; font-weight: 800; color: var(--azul-oscuro); }
+
+        /* PORTADA (HERO) */
+        .hero {
+            background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.8)), 
+                        url('https://images.unsplash.com/photo-1581850518616-bcb8188bd44c?q=80&w=2070');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 80vh; /* Altura mínima */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero span { color: var(--dorado); }
+        .hero p { font-size: 1.1rem; margin-bottom: 30px; max-width: 600px; opacity: 0.9; }
+
+        /* BOTONES */
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+        .btn-primary { background: var(--dorado); color: #1e1e1e; }
+        .btn-whatsapp { background: #25d366; color: white; }
+        .btn:hover { transform: scale(1.05); }
+
+        /* SECCIONES */
+        .section { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .icon-box {
+            width: 60px; height: 60px;
+            background: #e0e7ff; color: var(--azul-oscuro);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 20px;
+        }
+
+        /* IMAGEN Y SERVICIOS */
+        .services-area { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+        .services-img img { width: 100%; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .check-list li { list-style: none; margin-bottom: 15px; display: flex; gap: 10px; }
+        .check-list i { color: #22c55e; }
+
+        /* FOOTER */
+        footer { background: #0f172a; color: #94a3b8; padding: 40px 20px; text-align: center; }
+
+        /* MÓVIL */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .services-area { flex-direction: column; }
         }
     </style>
 </head>
-<body class="text-gray-700 bg-gray-50 overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-900">
-                    <img src="logo.jpg" alt="Logo" class="w-full h-full object-cover">
-                </div>
-                <span class="text-xl font-bold text-slate-800 tracking-tight">Pisos Eficientes<span class="text-blue-600">.co</span></span>
-            </div>
-            <a href="https://wa.me/573159157491" target="_blank" class="hidden md:inline-flex items-center gap-2 bg-green-500 text-white px-5 py-2 rounded-full font-medium hover:bg-green-600 transition shadow-lg hover:shadow-green-200">
-                <i class="fab fa-whatsapp text-lg"></i> Cotizar Ahora
-            </a>
+    <nav>
+        <div class="logo-area">
+            <img src="logo.jpg" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+            <span class="brand">Pisos Eficientes</span>
         </div>
+        <a href="https://wa.me/573159157491" class="btn btn-whatsapp" style="padding: 8px 20px; font-size: 0.9rem;">
+            <i class="fab fa-whatsapp"></i> Cotizar
+        </a>
     </nav>
 
-    <header class="hero-bg h-screen min-h-[600px] flex items-center relative" id="inicio">
-        <div class="container mx-auto px-6 text-center text-white pt-20">
-            <div data-aos="fade-up" data-aos-duration="1000">
-                <span class="bg-blue-600/30 border border-blue-400/50 text-blue-100 px-4 py-1 rounded-full text-sm font-semibold tracking-wider uppercase mb-6 inline-block backdrop-blur-md">
-                    🚀 Instalación en 1-2 días
-                </span>
-                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                    Renovamos tus pisos <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">sin escombros</span> y sin estrés
-                </h1>
-                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
-                    Especialistas en pisos SPC y Laminados en Bogotá. Acabados de lujo con instalación técnica garantizada por 1 año.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/573159157491?text=Hola,%20quiero%20cotizar%20mis%20pisos." class="btn-hover-effect bg-yellow-500 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:bg-yellow-400 flex items-center justify-center gap-2">
-                        Cotizar Gratis <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <div class="flex items-center justify-center gap-2 text-white bg-white/10 backdrop-blur px-6 py-4 rounded-xl border border-white/20">
-                        <i class="fas fa-tag text-yellow-400"></i> Desde $30.000 / m²
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="hero">
+        <div class="badge">🚀 Instalación Técnica en Bogotá</div>
+        <h1>Renovamos tus pisos <br><span>Sin Escombros</span></h1>
+        <p>Especialistas en pisos SPC y Laminados. Acabados de lujo con instalación garantizada por 1 año.</p>
         
-        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-gray-50"></path>
-            </svg>
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+            <a href="https://wa.me/573159157491" class="btn btn-primary">
+                Cotizar Gratis <i class="fas fa-arrow-right"></i>
+            </a>
+            <div style="display: flex; align-items: center; gap: 5px; color: white;">
+                <i class="fas fa-tag" style="color: var(--dorado);"></i> Desde $30.000 / m²
+            </div>
         </div>
     </header>
 
-    <section class="py-20" id="beneficios">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl font-bold text-slate-800 mb-4">¿Por qué elegirnos?</h2>
-                <div class="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
+    <section class="section">
+        <div class="grid-3">
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-clock"></i></div>
+                <h3>Súper Rápidos</h3>
+                <p>Instalamos hasta 50m² en un solo día. Tu hogar listo en tiempo récord.</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6 text-blue-600 text-2xl">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">60% Más Rápidos</h3>
-                    <p class="text-gray-600">Instalamos hasta 50m² en un solo día. Tu hogar listo en tiempo récord sin obras eternas.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-6 text-green-600 text-2xl">
-                        <i class="fas fa-broom"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Cero Escombros</h3>
-                    <p class="text-gray-600">Proceso limpio y seco. No generamos polvo ni suciedad difícil. Ideal para hogares habitados.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center mb-6 text-yellow-600 text-2xl">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Doble Garantía</h3>
-                    <p class="text-gray-600">1 año de garantía por escrito sobre la instalación. Respaldo total en mano de obra.</p>
-                </div>
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-broom"></i></div>
+                <h3>Obra Limpia</h3>
+                <p>Cero polvo y cero escombros. Ideal si ya estás viviendo en casa.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                <h3>Garantía Real</h3>
+                <p>1 año de respaldo por escrito sobre nuestra mano de obra.</p>
             </div>
         </div>
     </section>
 
-    <section class="bg-slate-900 py-16 text-white" id="stats">
-        <div class="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-                <div class="text-4xl font-bold text-yellow-400 mb-2 counter" data-target="150">0</div>
-                <div class="text-sm text-gray-400">Proyectos Realizados</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-blue-400 mb-2 counter" data-target="5000">0</div>
-                <div class="text-sm text-gray-400">m² Instalados</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-green-400 mb-2 counter" data-target="98">0</div>
-                <div class="text-sm text-gray-400">% Clientes Felices</div>
-            </div>
-            <div>
-                <div class="text-4xl font-bold text-purple-400 mb-2 counter" data-target="24">0</div>
-                <div class="text-sm text-gray-400">Horas de Respuesta</div>
-            </div>
+    <section class="section services-area">
+        <div style="flex: 1; min-width: 300px;">
+            <img src="beto.jpg" alt="Beto Instalador" style="width: 100%; border-radius: 15px;">
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--azul-oscuro);">Expertos en Pisos Modernos</h2>
+            <ul class="check-list">
+                <li><i class="fas fa-check-circle"></i> Instalación de Pisos SPC (Click)</li>
+                <li><i class="fas fa-check-circle"></i> Instalación de Laminados HDF</li>
+                <li><i class="fas fa-check-circle"></i> Nivelación de superficies</li>
+                <li><i class="fas fa-check-circle"></i> Visita técnica y medición láser</li>
+            </ul>
+            <a href="https://wa.me/573159157491" class="btn btn-whatsapp" style="margin-top: 20px;">
+                Hablar con un Asesor
+            </a>
         </div>
     </section>
 
-    <section class="py-20 bg-white" id="servicios">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2" data-aos="fade-right">
-                <img src="beto.jpg" alt="Instalador experto" class="rounded-2xl shadow-2xl w-full object-cover h-[500px]">
-            </div>
-            <div class="md:w-1/2" data-aos="fade-left">
-                <span
+    <footer>
+        <p>&copy; 2025 Pisos Eficientes Bogotá</p>
+        <p style="font-size: 0.9rem; margin-top: 10px;">Bogotá D.C. - Colombia</p>
+    </footer>
+
+</body>
+</html>
